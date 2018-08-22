@@ -1,0 +1,63 @@
+/*reset css  重置样式  让浏览器表现一致*/
+body{
+    font-size: 14px;
+    color: #333;
+}
+*,
+*::before,
+*::after{
+    /*通配所有的标签和伪元素*/
+    margin: 0;
+    padding: 0;
+    /*避免宽度溢出 造成横向滚动条*/
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    /*点击高亮设置 清除  transparent 完成透明*/
+    -webkit-tap-highlight-color: transparent;
+}
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: #333;
+}
+input[type="text"],input[type="search"],textarea{
+    border: none;
+    outline: none;
+    resize: none;
+    /*在移动端浏览  立体效果 清除*/
+    -webkit-appearance: none;
+}
+/*common css 公用样式  */
+.f_left{
+    float: left;
+}
+.f_right{
+    float: right;
+}
+.clearfix::before,
+.clearfix::after{
+    content: "";
+    height: 0;
+    line-height: 0;
+    visibility: hidden;
+    display: block;
+    clear: both;
+}
+.ml10{
+    margin-left: 10px;
+}
+.mr10{
+    margin-right: 10px;
+}
+.mt10{
+    margin-top: 10px;
+}
+.mb10{
+    margin-bottom: 10px;
+}
+/*精灵图样式*/
+[class^="icon_"],[class*=" icon_"]{
+    background: url("../images/sprites.png") no-repeat 0 0/200px 200px;
+}
